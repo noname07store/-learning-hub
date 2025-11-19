@@ -988,7 +988,7 @@
                     <p style="font-size: 0.9rem; opacity: 0.7;">Upload video Anda di dashboard admin</p>
                 </div>
             </div>
-            
+
             <div class="tutorial-info">
                 <div class="tutorial-badge" id="detailCategory">Programming</div>
                 <h1 id="detailTitle">Judul Tutorial</h1>
@@ -1096,7 +1096,7 @@
             <main class="admin-content">
                 <div id="guideSection">
                     <h2>📖 Panduan Lengkap Admin Dashboard</h2>
-                    
+
                     <div class="info-box">
                         <h4>🎯 Cara Masuk Dashboard Admin</h4>
                         <p><strong>Cara 1: Melalui URL</strong></p>
@@ -1113,7 +1113,7 @@
                         <p>✅ File <strong>index.html</strong> (file website utama)</p>
                         <p>✅ Folder <strong>assets/</strong> (jika ada gambar/video)</p>
                         <p>✅ Folder <strong>uploads/</strong> (untuk menyimpan konten yang di-upload)</p>
-                        
+
                         <h4 style="margin-top: 1.5rem; color: var(--primary-color);">🌐 Opsi Hosting Gratis:</h4>
                         <p><strong>1. GitHub Pages</strong> (Paling Mudah)</p>
                         <p>• Daftar di github.com</p>
@@ -1121,12 +1121,12 @@
                         <p>• Upload file index.html</p>
                         <p>• Settings → Pages → Deploy</p>
                         <p>• Website online di: username.github.io/nama-repo</p>
-                        
+
                         <p style="margin-top: 1rem;"><strong>2. Netlify</strong> (Drag & Drop)</p>
                         <p>• Buka netlify.com → Login</p>
                         <p>• Drag & drop folder website Anda</p>
                         <p>• Otomatis online dalam 1 menit</p>
-                        
+
                         <p style="margin-top: 1rem;"><strong>3. Vercel</strong> (Cepat & Gratis)</p>
                         <p>• Daftar di vercel.com</p>
                         <p>• Import dari GitHub atau upload manual</p>
@@ -1153,7 +1153,7 @@
                         <p>3. Isi form tutorial (judul, kategori, deskripsi)</p>
                         <p>4. Upload file video/gambar</p>
                         <p>5. Klik <strong>"Publish Tutorial"</strong></p>
-                        
+
                         <p style="margin-top: 1rem;"><strong>Opsi 2: Gunakan Cloud Storage (Recommended)</strong></p>
                         <p><strong>YouTube:</strong> Upload video ke YouTube → Embed link</p>
                         <p><strong>Google Drive:</strong> Upload file → Get shareable link</p>
@@ -1169,7 +1169,7 @@
                         <p>3. Buat file <strong>upload.php</strong> untuk handle upload</p>
                         <p>4. Buat file <strong>api.php</strong> untuk CRUD operations</p>
                         <p>5. Ubah function JavaScript untuk connect ke backend</p>
-                        
+
                         <p style="margin-top: 1rem;"><strong>Struktur Database (MySQL):</strong></p>
                         <p><code>tutorials</code> table: id, title, category, description, video_url, instructor, rating, created_at</p>
                         <p><code>users</code> table: id, name, email, password, role, created_at</p>
@@ -1502,7 +1502,7 @@
         function loadTutorials(filter = 'all') {
             const grid = document.getElementById('tutorialGrid');
             const allGrid = document.getElementById('allTutorialsGrid');
-            
+
             let filteredTutorials = tutorials;
             if (filter !== 'all') {
                 filteredTutorials = tutorials.filter(t => t.category === filter);
@@ -1554,9 +1554,9 @@
         function searchTutorials() {
             const input = document.getElementById('searchInput');
             if (!input) return;
-            
+
             const searchTerm = input.value.toLowerCase();
-            const filtered = tutorials.filter(t => 
+            const filtered = tutorials.filter(t =>
                 t.title.toLowerCase().includes(searchTerm) ||
                 t.description.toLowerCase().includes(searchTerm) ||
                 t.category.toLowerCase().includes(searchTerm)
@@ -1631,7 +1631,7 @@
             document.body.classList.toggle('dark-mode');
             const isDark = document.body.classList.contains('dark-mode');
             localStorage.setItem('darkMode', isDark);
-            
+
             const themeToggle = document.querySelector('.theme-toggle');
             themeToggle.textContent = isDark ? '☀️' : '🌙';
         }
@@ -1677,5 +1677,6 @@
         // Initialize on load
         window.addEventListener('DOMContentLoaded', initPage);
     </script>
+    <!-- Updated: 19 November 2025 -->
 </body>
 </html>
